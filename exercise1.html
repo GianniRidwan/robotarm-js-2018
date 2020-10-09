@@ -1,17 +1,19 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>exercise 1</title>
-		<script type="text/javascript" src="robot-arm.js"></script>
-	</head>
 	<body>
+		<canvas id="canvas" width="800" height="600"></canvas>
+		<script src="robot-arm.js"></script>
 		<script>
 		  var canvas = document.getElementById("canvas");
 		  var robotArm = new RobotArm(canvas);
 
 		  robotArm.loadLevel("exercise 1");
 
+		  robotArm.speed = 500;
+
+		  robotArm.moveRight(); 
+		  robotArm.grab();
+		  robotArm.moveLeft();
+		  robotArm.drop();
 		  // Je eigen code plaats je hier.
 
 		  robotArm.run();
