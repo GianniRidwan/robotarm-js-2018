@@ -10,20 +10,39 @@
             
             robotArm.speed = 500;
 
-            for (var i = 0; i < 3; i++) {
-                robotArm.moveRight();
+
+            for(var i = 4; i > 0; i--) {
+                robotArm.grab();
+
+
+                for(var j = 5; j > 0; j--) {
+                    robotArm.moveRight();
+                }
+
+                robotArm.drop();
+
+                for(var o = 4; o > 0; o--) {
+                    robotArm.moveLeft();
+                }  
             }
-                for (var a = 0; a < 4; a++) {
+            for(var u = 3; u > 0; u--) {
+                robotArm.moveLeft();   
+            }
+                for(var k = 3; k > 0; k--) {
                     robotArm.grab();
-                    for (var e = 0; e < 5; e++) {
-                        robotArm.moveRight();
-                    }
-                    robotArm.drop();
-                        for (var o = 0; o < 5; o++) {
+                        for(var e = 5; e > 0; e--) {
+                            robotArm.moveRight();
+                        }
+                        robotArm.drop();
+                        for(var a = 4; a > 0; a--) {
                             robotArm.moveLeft();
                         }
-                }            
-                robotArm.moveLeft();
+                }
+
+                for(var q = 2; q > 0; q--) {
+                    robotArm.moveLeft();
+                }
+
                 
 
             robotArm.run();
